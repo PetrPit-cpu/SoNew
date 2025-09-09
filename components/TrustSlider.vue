@@ -4,48 +4,29 @@
     <div class="fade-mask fade-mask--right"></div>
 
     <div class="trust-slider-row">
-      <swiper
-        :modules="modules"
-        :slides-per-view="'auto'"
-        :space-between="40"
-        :free-mode="{ enabled: true, sticky: false }"
-        :mousewheel="{ forceToAxis: true }"
-        :autoplay="{ delay: 2000, disableOnInteraction: false, reverseDirection: false }"
-        :grab-cursor="true"
-        class="trust-slider"
-      >
-        <swiper-slide
-          v-for="(logo, index) in partnerLogos"
-          :key="index"
-          style="height: 80px; width: 200px"
-        >
-          <div class="trust-slide">
+      <div class="trust-slider">
+        <div class="trust-slider-track">
+          <div
+            v-for="(logo, index) in partnerLogos"
+            :key="index"
+            class="trust-slide"
+          >
             <img
               :src="logo.src"
               :alt="logo.alt"
               class="trust-slide__image"
             />
           </div>
-        </swiper-slide>
-      </swiper>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { FreeMode, Mousewheel, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/free-mode";
-
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
   data() {
     return {
-      modules: [FreeMode, Mousewheel, Autoplay],
       partnerLogos: [
         { src: "/images/logo-partners/ideas.svg", alt: "ideas" },
         { src: "/images/logo-partners/time-web.svg", alt: "time-web" },
@@ -96,22 +77,42 @@ export default {
 
 .trust-slider {
   margin: 0 -20px;
-  overflow: visible;
+  overflow: hidden;
   padding: 0 120px;
+}
+
+.trust-slider-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.trust-slider:hover .trust-slider-track {
+  animation-play-state: paused;
 }
 
 .trust-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  cursor: grab;
+  height: 80px;
+  width: 200px;
+  flex-shrink: 0;
+  margin-right: 40px;
+  transition: transform 0.3s ease;
 }
 
-.trust-slide:active {
-  cursor: grabbing;
+.trust-slide:hover {
+  transform: translateY(-2px);
 }
 
 .trust-slide__image {
@@ -127,14 +128,6 @@ export default {
   transform: scale(1.05);
 }
 
-.trust-slider .swiper-wrapper {
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.swiper-slide:hover {
-  transform: translateY(-2px);
-}
-
 @media (max-width: 768px) {
   .trust-slider {
     padding: 0 60px;
@@ -144,9 +137,10 @@ export default {
     width: 60px;
   }
 
-  .swiper-slide {
-    width: 150px !important;
-    height: 60px !important;
+  .trust-slide {
+    width: 150px;
+    height: 60px;
+    margin-right: 30px;
   }
 }
 
@@ -159,9 +153,10 @@ export default {
     width: 40px;
   }
 
-  .swiper-slide {
-    width: 120px !important;
-    height: 50px !important;
+  .trust-slide {
+    width: 120px;
+    height: 50px;
+    margin-right: 20px;
   }
 }
 </style>

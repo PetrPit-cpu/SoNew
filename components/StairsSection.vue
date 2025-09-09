@@ -559,49 +559,12 @@
   padding-top: 50px;
   position: relative;
 
-  &__block-element {
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    transition: transform 0.1s ease;
-  }
-
-  &__line-vertical {
-    height: 5.1rem;
-    width: 1px;
-    background-color: c.$white;
-  }
-
-  &__ellipse {
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    background-color: c.$white;
-    position: relative;
-    z-index: 2;
-  }
 
   &__container {
     max-width: 1017px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-  }
-
-  &__description-step {
-    flex-direction: column;
-    gap: 8.5rem;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(
-        calc(-8px + var(--responsive-offset) - var(--responsive-offset-up))
-      );
-      z-index: 3;
-    }
   }
 
   &__background {
@@ -640,47 +603,10 @@
     }
   }
 
-  &__wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 265px;
-  }
-
-  &__content {
-    position: relative;
-    z-index: 2;
-  }
-
-  &__steps {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-bottom: 350px;
-  }
-
-  &__step {
-    position: relative;
-    max-width: 189px;
-    width: 100%;
-    font-family: v.$font-primary;
-    font-weight: v.$font-weight-regular;
-    font-size: v.$font-size-base;
-    color: c.$white;
-    line-height: 1;
-    text-align: left;
-    transition: all 0.3s ease;
-    letter-spacing: -0.9px;
-  }
 }
 
 @media (max-width: v.$breakpoint-lg) {
   .stairs {
-    &__wrapper {
-      overflow: visible;
-      padding-top: 325px;
-    }
 
     &__title {
       &-accent {
@@ -688,51 +614,8 @@
       }
     }
 
-    &__steps {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 100px;
-      padding-bottom: 378px;
-      transform: none;
-      margin-left: -107px;
-    }
-
-    &__description-step {
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      margin-right: 0 !important;
-      max-width: none;
-      gap: 20px !important;
-      margin-left: 0 !important;
-    }
-
-    &__step {
-      margin-right: 0 !important;
-      padding-top: 0 !important;
-      max-width: 189px;
-      flex-shrink: 0;
-    }
-
-    &__block-element {
-      display: none;
-    }
-
-    &__block-element-mob {
-      display: flex;
-      align-items: center;
-    }
-
-    &__line-horizontal-mob {
-      display: flex;
-    }
-
     &__background {
       height: 1075px;
-    }
-
-    &.step-mob {
-      transform: none !important;
     }
   }
 }
@@ -776,36 +659,6 @@
         color: c.$primary-blue;
       }
     }
-
-    &__wrapper {
-      padding-top: 333px;
-    }
-
-    &__steps {
-      margin-left: -28px;
-      gap: 100px;
-      padding-bottom: 36px;
-    }
-
-    &__description-step {
-      flex-direction: row;
-      gap: 8px !important;
-      align-items: flex-end;
-    }
-
-    &__step {
-      font-size: 13px;
-      max-width: 120px;
-    }
-
-    &__ellipse {
-      width: 11px;
-      height: 11px;
-    }
-
-    &__line-horizontal-mob {
-      display: flex;
-    }
   }
 }
 
@@ -818,58 +671,16 @@
       font-size: v.$font-size-lg;
       margin-bottom: 30px;
     }
-
-    &__wrapper {
-      padding-top: 265px;
-    }
-
-    &__steps {
-      padding-bottom: 60px;
-      gap: 20px;
-    }
-
-    &__step {
-      font-size: v.$font-size-sm;
-    }
-
-    &__ellipse {
-      width: 12px;
-      height: 12px;
-    }
   }
 }
 
 @media (max-width: 576px) {
   .stairs {
-    &__steps {
-      margin-left: 0 !important;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 100px;
-    }
-
-    &__description-step {
-      justify-content: flex-start !important;
-      text-align: left;
-
-      &.step-mob {
-        justify-content: flex-start !important;
-        text-align: left;
-      }
-    }
-
-    &__step {
-      text-align: left;
-    }
 
     &__title {
       font-weight: v.$font-weight-bold;
       font-size: v.$font-size-xxl;
       line-height: 1.1;
-    }
-
-    &__wrapper {
-      padding-top: 126px;
     }
   }
 }

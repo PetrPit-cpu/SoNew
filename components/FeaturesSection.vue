@@ -179,11 +179,12 @@
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: none;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-color: c.$primary-blue;
+      box-shadow: 0 8px 24px rgba(29, 133, 221, 0.2);
     }
 
     &--large {

@@ -81,6 +81,11 @@ defineEmits(['toggle'])
     height: 20px;
     flex-shrink: 0;
     opacity: 0.7;
+    transition: transform 0.3s ease;
+  }
+
+  &__icon--rotated {
+    transform: rotate(180deg);
   }
 
   &__content {
