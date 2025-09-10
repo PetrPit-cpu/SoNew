@@ -630,7 +630,7 @@
     }
 
     &__background {
-      left: 52%;
+      left: 53%;
       top: 78px;
       transform: translateX(-50%);
       max-width: calc(100vw - 30px);

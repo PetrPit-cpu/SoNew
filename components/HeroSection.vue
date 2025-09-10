@@ -10,7 +10,7 @@
           Надёжный инструмент для выявления слабых мест и совершенствования
           дебютной подготовки шахматиста
         </p>
-        <button class="hero__button">Начать анализ</button>
+        <button class="hero__button" @click="goToAnalysis">Начать анализ</button>
       </div>
       <div class="hero__image-wrapper">
         <img
@@ -23,7 +23,11 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const goToAnalysis = () => {
+  window.open('https://science64.com/', '_blank', 'noopener,noreferrer');
+};
+</script>
 
 <style lang="scss" scoped>
 @use '~/assets/scss/variables' as v;

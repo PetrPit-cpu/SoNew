@@ -33,11 +33,17 @@ import SwiperSlider from "@/components/SwiperSlider.vue";
 .community {
   margin-bottom: 150px;
 
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__content {
     max-width: 761px;
     width: 100%;
     margin: 0 auto 40px;
     text-align: center;
+    padding: 0 20px;
   }
 
   &__title {
@@ -64,6 +70,7 @@ import SwiperSlider from "@/components/SwiperSlider.vue";
 
   &__slider {
     width: 100%;
+    overflow: visible;
   }
 
   .community__title-text-short {
@@ -81,6 +88,16 @@ import SwiperSlider from "@/components/SwiperSlider.vue";
   .community {
     margin-bottom: 180px;
 
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__content {
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
     &__title {
       font-size: v.$font-size-ms-mob;
       text-align: left;
@@ -91,16 +108,22 @@ import SwiperSlider from "@/components/SwiperSlider.vue";
       font-size: v.$font-size-md;
       text-align: left;
     }
-
-    &__content {
-      margin-bottom: 20px;
-    }
   }
 }
 
 @media (max-width: v.$breakpoint-sm) {
   .community {
     margin-bottom: 180px;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__content {
+      padding: 0 20px;
+      margin-bottom: 25px;
+    }
 
     &__title {
       font-size: v.$font-size-ms-mob;
@@ -111,10 +134,6 @@ import SwiperSlider from "@/components/SwiperSlider.vue";
       .community__title-text-short {
         display: flex;
       }
-    }
-
-    &__content {
-      margin-bottom: 25px;
     }
   }
 }

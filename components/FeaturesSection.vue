@@ -6,7 +6,8 @@
         <span class="features__subtitle-accent">Science64</span> уникальным
       </h2>
       <div class="features__grid">
-        <div class="features__card features__card--large">
+        <div class="features__card features__card--large" @mouseenter="handleMouseEnter" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
+          <div class="features__card-shadow"></div>
           <div class="features__card-header card-mob">
             <img
               src="/images/icon-max.svg"
@@ -34,7 +35,8 @@
           <div class="features__card-bg"></div>
         </div>
 
-        <div class="features__card features__card--small">
+        <div class="features__card features__card--small" @mouseenter="handleMouseEnter" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
+          <div class="features__card-shadow"></div>
           <div class="features__card-content">
             <div class="features__card-header">
               <img
@@ -53,7 +55,8 @@
           </div>
         </div>
 
-        <div class="features__card features__card--small">
+        <div class="features__card features__card--small" @mouseenter="handleMouseEnter" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
+          <div class="features__card-shadow"></div>
           <div class="features__card-content">
             <div class="features__card-header">
               <img
@@ -114,7 +117,8 @@
           </div>
         </div>
 
-        <div class="features__card features__card--large">
+        <div class="features__card features__card--large" @mouseenter="handleMouseEnter" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
+          <div class="features__card-shadow"></div>
           <div class="features__card-header">
             <img
               src="/public/images/arrow-merge-both.svg"
@@ -132,7 +136,8 @@
           </p>
         </div>
 
-        <div class="features__card features__card--large">
+        <div class="features__card features__card--large" @mouseenter="handleMouseEnter" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
+          <div class="features__card-shadow"></div>
           <div class="features__card-header">
             <img
               src="/public/images/icon-skill.svg"
@@ -153,7 +158,38 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const handleMouseEnter = (event) => {
+  const card = event.currentTarget;
+  const shadow = card.querySelector('.features__card-shadow');
+  card.style.opacity = '1';
+  card.style.transform = 'translateY(-4px)';
+  shadow.style.opacity = '1';
+  shadow.style.display = 'block';
+};
+
+const handleMouseMove = (event) => {
+  const card = event.currentTarget;
+  const shadow = card.querySelector('.features__card-shadow');
+  const rect = card.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  // Позиционируем центр тени точно под курсором
+  const shadowSize = 150; // половина размера тени
+  shadow.style.left = `${x - shadowSize}px`;
+  shadow.style.top = `${y - shadowSize}px`;
+};
+
+const handleMouseLeave = (event) => {
+  const card = event.currentTarget;
+  const shadow = card.querySelector('.features__card-shadow');
+  card.style.opacity = '0.8';
+  card.style.transform = 'translateY(0px)';
+  shadow.style.opacity = '0';
+  shadow.style.display = 'none';
+};
+</script>
 
 <style lang="scss" scoped>
 @use "~/assets/scss/variables" as v;
@@ -181,10 +217,22 @@
     position: relative;
     transition: all 0.3s ease;
     border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    overflow: hidden;
 
-    &:hover {
-      border-color: c.$primary-blue;
-      box-shadow: 0 8px 24px rgba(29, 133, 221, 0.2);
+    &-shadow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29, 133, 221, 1) 0%, rgba(29, 133, 221, 0.8) 20%, rgba(29, 133, 221, 0.5) 40%, rgba(29, 133, 221, 0.2) 60%, transparent 80%);
+      filter: blur(25px);
+      z-index: -1;
+      opacity: 0;
+      display: none;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
     }
 
     &--large {

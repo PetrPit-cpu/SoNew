@@ -11,17 +11,17 @@
             />
             <ul class="footer__social-list">
               <li class="footer__social-item">
-                <a class="footer__social-link" href="#">
+                <a class="footer__social-link" href="https://t.me/official_science64" target="_blank" rel="noopener noreferrer">
                   <img
                     class="footer__social-icon"
                     src="/images/brand-telegram.svg"
                     alt="Telegram"
                   />
-                  <span class="footer__social-text">телеграм ник</span>
+                  <span class="footer__social-text">@official_science64</span>
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="#">
+                <a class="footer__social-link" href="mailto:solutions.chess@gmail.com">
                   <img
                     class="footer__social-icon"
                     src="/images/mail.svg"
@@ -40,27 +40,27 @@
           <h3 class="footer__section-title">О компании</h3>
           <ul class="footer__link-list">
             <li class="footer__link-item">
-              <a class="footer__link" href="#"
-                >ООО «ИНТЕЛЛЕКТУАЛЬНЫЕ СИСТЕМЫ»</a
+              <span class="footer__text"
+                >ООО «ИНТЕЛЛЕКТУАЛЬНЫЕ СИСТЕМЫ»</span
               >
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">
+              <span class="footer__text">
                 <span>Разработка аналитического</span>
                 <span>программного обеспечения</span>
-              </a>
+              </span>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">
+              <span class="footer__text">
                 <span>Амурская область, г. Благовещенск,</span>
                 <span>ул. Горького, 174 офис 407</span>
-              </a>
+              </span>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">ИНН 2801277294</a>
+              <span class="footer__text">ИНН 2801277294</span>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">КПП 280101001</a>
+              <span class="footer__text">КПП 280101001</span>
             </li>
           </ul>
         </li>
@@ -69,36 +69,36 @@
           <h3 class="footer__section-title">Меню</h3>
           <ul class="footer__link-list">
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Главная</a>
+              <a class="footer__link" href="">Главная</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">О Science64</a>
+              <a class="footer__link" href="">О Science64</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Как работает</a>
+              <a class="footer__link" href="">Как работает</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Тарифы</a>
+              <a class="footer__link" href="">Тарифы</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Отзывы</a>
+              <a class="footer__link" href="">Отзывы</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">FAQ</a>
+              <a class="footer__link" href="">FAQ</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Партнеры</a>
+              <a class="footer__link" href="">Партнеры</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#"
+              <a class="footer__link" href=""
                 >Условия возврата и обмена покупки</a
               >
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Политика конфиденциальности</a>
+              <a class="footer__link" href="">Политика конфиденциальности</a>
             </li>
             <li class="footer__link-item">
-              <a class="footer__link" href="#">Публичная оферта</a>
+              <a class="footer__link" href="">Публичная оферта</a>
             </li>
           </ul>
         </li>
@@ -241,6 +241,18 @@
       outline-offset: 2px;
       border-radius: 4px;
     }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-family: v.$font-inter;
+    font-weight: v.$font-weight-medium;
+    font-size: v.$font-size-sm;
+    line-height: 1.4;
+    color: c.$grey-description;
 
     span {
       display: block;

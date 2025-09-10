@@ -276,12 +276,12 @@
 
         <p class="pricing__info">
           Ознакомиться с
-          <a class="pricing__pay-link" href="#">способами оплаты</a> и
-          <a class="pricing__pay-link" href="#">условиями возврата</a>
+          <a class="pricing__pay-link" href="">способами оплаты</a> и
+          <a class="pricing__pay-link" href="">условиями возврата</a>
         </p>
         <ul class="pricing__list-payment list-reset flex">
           <li class="pricing__list-payment-item">
-            <a href="#">
+            <a href="">
               <img
                 src="/images/payments/visa.svg"
                 alt="visa"
@@ -290,7 +290,7 @@
             </a>
           </li>
           <li class="pricing__list-payment-item">
-            <a href="#">
+            <a href="">
               <img
                 src="/images/payments/master-card.svg"
                 alt="mastercard"
@@ -299,7 +299,7 @@
             </a>
           </li>
           <li class="pricing__list-payment-item">
-            <a href="#">
+            <a href="">
               <img
                 src="/images/payments/spb.svg"
                 alt="mir"
@@ -308,7 +308,7 @@
             </a>
           </li>
           <li class="pricing__list-payment-item">
-            <a href="#">
+            <a href="">
               <img
                 src="/images/payments/t-bank.svg"
                 alt="yoomoney"
@@ -317,7 +317,7 @@
             </a>
           </li>
           <li class="pricing__list-payment-item">
-            <a href="#">
+            <a href="">
               <img
                 src="/images/payments/mir.svg"
                 alt="sberbank"
@@ -326,7 +326,7 @@
             </a>
           </li>
           <li class="pricing__list-payment-item">
-            <a href="#">
+            <a href="">
               <img
                 src="/images/payments/pci.svg"
                 alt="sberbank"

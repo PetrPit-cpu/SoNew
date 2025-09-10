@@ -34,11 +34,17 @@ import TrustSlider from "@/components/TrustSlider.vue";
   overflow-x: hidden;
   margin-bottom: 100px;
 
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__content {
     max-width: 761px;
     width: 100%;
     margin: 0 auto 40px;
     text-align: center;
+    padding: 0 20px;
   }
 
   &__title {
@@ -69,6 +75,7 @@ import TrustSlider from "@/components/TrustSlider.vue";
 
   &__slider {
     width: 100%;
+    overflow: visible;
   }
 }
 
@@ -82,6 +89,16 @@ import TrustSlider from "@/components/TrustSlider.vue";
   .trust {
     margin-bottom: 60px;
 
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__content {
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
     &__title {
       font-size: v.$font-size-ms-mob;
       text-align: left;
@@ -92,16 +109,22 @@ import TrustSlider from "@/components/TrustSlider.vue";
       font-size: v.$font-size-md;
       text-align: left;
     }
-
-    &__content {
-      margin-bottom: 20px;
-    }
   }
 }
 
 @media (max-width: v.$breakpoint-sm) {
   .trust {
     margin-bottom: 100px;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__content {
+      padding: 0 20px;
+      margin-bottom: 25px;
+    }
 
     &__title {
       font-size: v.$font-size-ms-mob;
@@ -111,10 +134,6 @@ import TrustSlider from "@/components/TrustSlider.vue";
     &__description {
       font-size: v.$font-size-sm;
       text-align: left;
-    }
-
-    &__content {
-      margin-bottom: 25px;
     }
   }
 }

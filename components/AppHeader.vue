@@ -2,11 +2,13 @@
   <header class="header">
     <div class="header__container container">
       <div class="header__logo">
-        <img
-          src="/images/header-logo.svg"
-          alt="Science64 Logo"
-          class="header__logo-image"
-        />
+        <a href="#">
+          <img
+            src="/images/header-logo.svg"
+            alt="Science64 Logo"
+            class="header__logo-image"
+          />
+        </a>
       </div>
 
       <nav class="header__nav" aria-label="Главная навигация">
@@ -40,7 +42,7 @@
             class="header__lang-arrow"
           />
         </button>
-        <a class="header__link" href="#" aria-label="Войти">
+        <a class="header__link" href="https://science64.com/" aria-label="Войти">
           <img
             src="/images/login-out.svg"
             alt=""
@@ -78,7 +80,6 @@
         @keydown.esc="closeMenu"
       >
         <div class="mobile-menu__header">
-
           <button
             class="mobile-menu__close"
             aria-label="Закрыть меню"
@@ -92,7 +93,9 @@
         <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
           <ul class="mobile-menu__list">
             <li class="mobile-menu__item">
-              <a href="#insights" class="mobile-menu__link" @click="closeMenu">О нас</a>
+              <a href="#insights" class="mobile-menu__link" @click="closeMenu"
+                >О нас</a
+              >
             </li>
             <li class="mobile-menu__item">
               <a href="#pricing" class="mobile-menu__link" @click="closeMenu"
@@ -100,7 +103,9 @@
               >
             </li>
             <li class="mobile-menu__item">
-              <a href="#community" class="mobile-menu__link" @click="closeMenu">Форум</a>
+              <a href="#community" class="mobile-menu__link" @click="closeMenu"
+                >Форум</a
+              >
             </li>
             <li class="mobile-menu__item">
               <a href="#footer" class="mobile-menu__link" @click="closeMenu"
@@ -108,17 +113,17 @@
               >
             </li>
             <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link" @click="closeMenu"
+              <a href="" class="mobile-menu__link" @click="closeMenu"
                 >Условия возврата и обмена покупки</a
               >
             </li>
             <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link" @click="closeMenu"
+              <a href="" class="mobile-menu__link" @click="closeMenu"
                 >Политика конфиденциальности</a
               >
             </li>
             <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link" @click="closeMenu"
+              <a href="" class="mobile-menu__link" @click="closeMenu"
                 >Публичная оферта</a
               >
             </li>
@@ -448,7 +453,6 @@ onBeforeUnmount(() => {
 
   &__lang {
     width: 100%;
-
   }
 }
 
@@ -469,7 +473,6 @@ onBeforeUnmount(() => {
 .slide-leave-to {
   transform: translateX(100%);
 }
-
 
 @media (max-width: v.$breakpoint-md) {
   .header {

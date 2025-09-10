@@ -132,8 +132,10 @@ export default {
 <style scoped>
 .slider-container {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
 }
 
 .fade-mask {
