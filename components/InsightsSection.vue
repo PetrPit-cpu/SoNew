@@ -188,6 +188,16 @@ onUnmounted(() => {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    background: #000;
+    
+    /* Исправление для iOS Safari */
+    -webkit-border-radius: 30px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
   }
 
   &__video-element {
@@ -198,9 +208,19 @@ onUnmounted(() => {
     border-radius: 0;
     outline: none;
     display: block;
+    background: #000;
+    
+    /* Исправление для iOS Safari */
+    -webkit-border-radius: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
 
     &:hover {
-      transform: scale(1.02);
+      transform: scale(1.02) translateZ(0);
     }
 
     &:focus {
@@ -300,10 +320,12 @@ onUnmounted(() => {
       height: 350px;
       margin: 50px 0 20px 0;
       border-radius: 20px;
+      -webkit-border-radius: 20px;
     }
 
     &__video-element {
       border-radius: 0;
+      -webkit-border-radius: 0;
     }
 
     &__play-button {
@@ -340,10 +362,12 @@ onUnmounted(() => {
       height: 280px;
       margin: 20px 0 20px 0;
       border-radius: 20px;
+      -webkit-border-radius: 20px;
     }
 
     &__video-element {
       border-radius: 0;
+      -webkit-border-radius: 0;
     }
 
     &__play-button {
@@ -376,10 +400,12 @@ onUnmounted(() => {
       height: 220px;
       margin: 20px 0 0 0;
       border-radius: 15px;
+      -webkit-border-radius: 15px;
     }
 
     &__video-element {
       border-radius: 0;
+      -webkit-border-radius: 0;
     }
 
     &__play-button {
