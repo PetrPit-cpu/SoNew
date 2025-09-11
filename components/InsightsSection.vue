@@ -182,7 +182,7 @@ onUnmounted(() => {
   &__video {
     max-width: 100%;
     width: 100%;
-    min-height: 436px;
+    height: 436px;
     margin: 64px 0 20px 0;
     border-radius: 30px;
     overflow: hidden;
@@ -195,8 +195,9 @@ onUnmounted(() => {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    border-radius: 30px;
+    border-radius: 0;
     outline: none;
+    display: block;
 
     &:hover {
       transform: scale(1.02);
@@ -296,12 +297,13 @@ onUnmounted(() => {
     margin-bottom: 120px;
 
     &__video {
-      min-height: 350px;
+      height: 350px;
       margin: 50px 0 20px 0;
+      border-radius: 20px;
     }
 
     &__video-element {
-      border-radius: 20px;
+      border-radius: 0;
     }
 
     &__play-button {
@@ -335,13 +337,13 @@ onUnmounted(() => {
     }
 
     &__video {
-      min-height: 280px;
+      height: 280px;
       margin: 20px 0 20px 0;
       border-radius: 20px;
     }
 
     &__video-element {
-      border-radius: 20px;
+      border-radius: 0;
     }
 
     &__play-button {
@@ -371,13 +373,13 @@ onUnmounted(() => {
     }
 
     &__video {
-      min-height: 220px;
+      height: 220px;
       margin: 20px 0 0 0;
       border-radius: 15px;
     }
 
     &__video-element {
-      border-radius: 15px;
+      border-radius: 0;
     }
 
     &__play-button {
