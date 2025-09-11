@@ -875,7 +875,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
+    height: 60px;
     width: 80px;
     flex-shrink: 0;
     margin-right: 20px;
@@ -1243,7 +1243,7 @@
 
     &__list-payment-item {
       width: 60px;
-      height: 30px;
+      height: 45px;
       margin-right: 15px;
     }
   }
@@ -1255,7 +1255,7 @@
 
     &__list-payment-item {
       width: 50px;
-      height: 25px;
+      height: 40px;
       margin-right: 10px;
     }
   }
