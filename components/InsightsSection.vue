@@ -24,7 +24,6 @@
           @ended="onEnded"
         >
           <source src="/videos/Soince-video.webm" type="video/webm">
-          <source src="/videos/Soince-video-compressed.mp4" type="video/mp4">
           <p>Ваш браузер не поддерживает видео. <a href="/videos/Soince-video-compressed.mp4">Скачать видео</a></p>
         </video>
 
